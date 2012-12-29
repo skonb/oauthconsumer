@@ -38,12 +38,12 @@
     OAConsumer *consumer;
     OAToken *token;
     NSString *realm;
-    NSString *signature;
+    NSString *__weak signature;
     id<OASignatureProviding> signatureProvider;
     NSString *nonce;
     NSString *timestamp;
 }
-@property(readonly) NSString *signature;
+@property(weak, readonly) NSString *signature;
 @property(readonly) NSString *nonce;
 
 - (id)initWithURL:(NSURL *)aUrl
